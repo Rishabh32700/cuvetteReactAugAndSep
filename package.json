@@ -20,5 +20,10 @@
   "homepage": "https://github.com/Rishabh32700/cuvetteReactAugAndSep#readme",
   "devDependencies": {
     "parcel": "^2.16.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   }
 }

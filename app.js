@@ -30,6 +30,8 @@
 //   headingElement
 // );
 
+import React from "react"
+import ReactDOM from "react-dom/client"
 const parentElement = React.createElement(
   "div",
   {
@@ -113,3 +115,14 @@ rootReact.render(parentElement);
 // webpack
 // parcel
 
+// build
+// local server
+// HMR
+// file watching algorithm 
+// caching
+// image optimization
+// minification of code
+// bunduling
+// code spliting
+// tree shaking
+// error handeling
