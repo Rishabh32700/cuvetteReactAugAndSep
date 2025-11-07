@@ -1,0 +1,24 @@
+{
+  "name": "cuvettereactaugandsep",
+  "version": "1.0.0",
+  "description": "hey this is react bactch for cuvette aug and sep batch",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rishabh32700/cuvetteReactAugAndSep.git"
+  },
+  "keywords": [
+    "cuvette"
+  ],
+  "author": "Rishabh sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rishabh32700/cuvetteReactAugAndSep/issues"
+  },
+  "homepage": "https://github.com/Rishabh32700/cuvetteReactAugAndSep#readme",
+  "devDependencies": {
+    "parcel": "^2.16.1"
+  }
+}
