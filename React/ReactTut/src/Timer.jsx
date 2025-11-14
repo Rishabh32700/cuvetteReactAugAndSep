@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Timer = () => {
+const Timer = ({state}) => {
   const [isRunning, setIsRunning] = useState(false);
   const [startTime, setStartTime] = useState(null);
   const [elapsedTime, setElapsedTiem] = useState(0);

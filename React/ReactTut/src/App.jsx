@@ -1,6 +1,6 @@
 import "./App.css";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // traditional react we have some inbuilt fetures Which are not present in your latest React?
 
@@ -8,15 +8,24 @@ import { useState } from "react";
 
 function App() {
   const [count, setCount] = useState(0);
-  // const [inc, setInc] = useState(0)
-  // const [dec, setDec] = useState(0)
+  const [inc, setInc] = useState(0)
+  const [dec, setDec] = useState(0)
+
+  useEffect(()=>{
+    console.log("hello from useEffect");
+
+    return(()=>{
+      console.log("conponent unmonted");
+    })
+  }, [ count, inc, dec ])
 
   return (
     <>
-    <h1>{count}</h1>
+    <h1 className = "hello" >{count}</h1>
       <button
         onClick={() => {
           setCount(count + 1);
+          setInc(inc+1)
         }}>
         add
       </button>
