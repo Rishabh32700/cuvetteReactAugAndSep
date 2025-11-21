@@ -8,30 +8,42 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [count, setCount] = useState(0);
-  const [inc, setInc] = useState(0)
-  const [dec, setDec] = useState(0)
+  // const arr = [];
+  const [arr, setArr] = useState([]);
+  const fetchUser = async () => {
+    const api = "https://api.github.com/users";
+    const fetchApi = await fetch(api);
+    const strRes = await fetchApi.json();
+    console.log(strRes);
+    setArr(strRes);
+  };
 
-  useEffect(()=>{
-    console.log("hello from useEffect");
+  console.log("arr ===> ", arr);
 
-    return(()=>{
+  useEffect(() => {
+    fetchUser();
+    return () => {
       console.log("conponent unmonted");
-    })
-  }, [ count, inc, dec ])
+    };
+  }, []);
 
   return (
     <>
-    <h1 className = "hello" >{count}</h1>
+      <h1 className="hello">{count}</h1>
+      {arr?.map((ele, idx) => {
+          return <li key={ele.id}>{ele.login}</li>;
+        })
+        .slice(0, 6)}
       <button
         onClick={() => {
           setCount(count + 1);
-          setInc(inc+1)
+          // setInc(inc+1)
         }}>
         add
       </button>
       <button
         onClick={() => {
-          if(count == 0) return
+          if (count == 0) return;
           setCount(count - 1);
         }}>
         sub
